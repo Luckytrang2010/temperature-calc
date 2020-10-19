@@ -34,6 +34,7 @@ int main() {
     int op;
     int op1;
     double temperature;
+    char tem[3] = "CFK";
     printf("Temperature Calculator\n-------------\nConvert from...\n[0] Celsius\n[1] Fahrenheit\n[2] Kelvin\nOption> ");
     scanf("%d",&op);
     printf("Convert to...\n[0] Celsius\n[1] Fahrenheit\n[2] Kelvin\nOption> ");
@@ -41,8 +42,8 @@ int main() {
     printf("Temperature value: ");
     scanf("%lf",&temperature);
     if (op == op1) {
-        printf("genius...it's %lf",temperature);
+        printf("genius...it's %lf%c",temperature,(char)tem[op1]);
     } else {
-        printf("Result: %.2f",converttemp(op,op1,temperature));
+        printf("Result: %lf%c",converttemp(op,op1,temperature),(char)tem[op1]);
     }
 }
